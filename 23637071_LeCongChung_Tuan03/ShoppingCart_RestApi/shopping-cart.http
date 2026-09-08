@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:8080/shopping-cart-api/api
+
+### Login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "username": "student",
+  "password": "123456"
+}
+
+### Kiểm tra session
+GET {{baseUrl}}/auth/session
+
+### Danh sách sản phẩm
+GET {{baseUrl}}/products
+
+### Thêm Laptop
+POST {{baseUrl}}/cart/items
+Content-Type: application/json
+
+{
+  "productId": 1
+}
+
+### Xem giỏ hàng
+GET {{baseUrl}}/cart
+
+### Logout
+DELETE {{baseUrl}}/auth/session
